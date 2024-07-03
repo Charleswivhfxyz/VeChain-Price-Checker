@@ -1,0 +1,32 @@
+# Drakkar-Software requirements
+OctoBot-Commons==1.9.47
+OctoBot-Trading==2.4.88
+OctoBot-Evaluators==1.9.5
+OctoBot-Tentacles-Manager==2.9.11
+OctoBot-Services==1.6.14
+OctoBot-Backtesting==1.9.7
+Async-Channel==2.2.1
+trading-backend==1.2.24
+
+## Others
+colorlog==6.8.0
+requests==2.31.0
+urllib3 # required by requests, used in imports: make sure it's always available
+packaging==23.2
+python-dotenv==1.0.0
+setuptools==69.0.3
+
+# Community
+websockets
+gmqtt==0.6.16
+
+# Supabase  ensure supabase_backend_tests keep passing when updating any of those
+supabase==1.0.4   # Supabase client
+gotrue==1.0.3     # Supabase authennticated API (required by supabase and enforced to allow direct import)
+supafunc==0.2.3   # Supabase functions calls (required by supabase and enforced to allow direct import)
+postgrest==0.10.8 # Supabase posgres calls (required by supabase and enforced to allow direct import)
+realtime==1.0.0   # Supabase realtime lib (required by supabase and enforced to allow direct import)
+
+# Experimental to prevent httpx.PoolTimeout
+httpcore==0.17.3  # to up to at least 1.0.2 (prevent default version when installing httpx which creates httpx.PoolTimeout)
+anyio==4.0.0      #
